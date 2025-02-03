@@ -29,8 +29,8 @@ Programming, Operating Systems, Data Structures and Algorithms, Software Enginee
   skills: "Python, C++, Java, TypeScript, Rust, Bash, LaTeX, Typst"
 )
 #skill_item(
-  category: "Machine Learning Libraries",
-  skills: "PyTorch, Transformers, Accelerate, vLLM, PyTorch-Lightning, Numpy, Scikit-learn, Pandas, Wandb, Raytune, Gymasium, Torchserve, CUDA, OpenMP, MPI"
+  category: "Libraries",
+  skills: "PyTorch, Transformers, Accelerate, JAX, PyTorch Lightning, Numpy, Scikit-learn, Pandas, Wandb, Raytune, Gymasium, CUDA, OpenMP, MPI"
 )
 #skill_item(
   category: "Developer Tools",
@@ -101,7 +101,8 @@ for simulation.]
   date: "Feb. 2024 - Apr. 2024",
   [Finetuned 2–3 billion parameter LLMs to correct grammar errors in long-form text across varying English fluency levels.],
   [Constructed a synthetic preference dataset using GPT-4 to model preference for minimal edits while correcting grammar to preserve authorial voice.],
-  [Demonstrated a 20% reduction in edit distance across English fluency levels post-alignment with DPO while preserving grammar correction performance.]
+  [Demonstrated a 20% reduction in edit distance across English fluency levels post-alignment with DPO while preserving grammar correction performance.],
+  [Technical Report #link("https://drive.google.com/file/d/1dejSqsNnwelq-adY88wegVSo86TjYxj2/view?usp=sharing")[(link)], Code #link("https://github.com/AY2324S2-CS4248-Team-47/Grammar-Error-Correction")[(link)]]
 ) 
 #project_item(
   name: "CNN for Pneumonia classification",
@@ -110,7 +111,8 @@ for simulation.]
   [Collaborated in a team of 3 to develop a transfer learning model capable of detecting pneumonia],
   [Trained ResNet-50 model to classify presence of pneumonia, achieving a weighted F1 score of 96%],
   [Built visualization tools to visualize regions of interest using feature attribution tools SHAP and LIME],
-  [Tools: PyTorch, Timm, SHAP, LIME]
+  [Tools: PyTorch, Timm, SHAP, LIME],
+  [Technical Report #link("https://drive.google.com/file/d/1xOxj_yhNTROcvOEWShGHzBo4_EWhshtX/view?usp=sharing")[(link)], Code #link("https://github.com/Jayanth-Balasubramanian/Pneumonia-Detection")[(link)]]
 )
 #resume_heading("Leadership")
 #exp_item(
