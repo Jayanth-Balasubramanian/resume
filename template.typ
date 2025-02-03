@@ -26,7 +26,7 @@
   name: "Jake Ryan",
   phone: "123-456-7890",
   email: "jake@su.edu",
-  linkedin: "linkedin.com/in/jake",
+  linkedin: "",
   site: "github.com/jake",
 ) = {
   align(center,
@@ -34,7 +34,10 @@
       #name_header(name) \
       #phone |
       #link("mailto:" + email)[#email] |
-      #link("https://" + linkedin)[#linkedin] |
+      #if linkedin != "" {
+        [#link("https://" + linkedin)[#linkedin] |]
+      }
+      // #link("https://" + linkedin)[#linkedin] |
       #link("https://" + site)[#site]
     ]
   )
@@ -55,10 +58,12 @@
   name: "Sample University", 
   degree: "B.S in Bullshit", 
   location: "Foo, BA", 
-  date: "Aug. 1600 - May 1750"
+  date: "Aug. 1600 - May 1750",
+  ..points
 ) = {
   set block(above: 0.7em, below: 1em)
-  pad(left: 1em, right: 0.5em, grid(
+  pad(left: 1em, right: 0.5em, box[
+    #grid(
     columns: (3fr, 1fr),
     align(left)[
       *#name* \
@@ -68,7 +73,9 @@
       #location \
       _#date _
     ]
-  ))
+  )
+  #list(..points)
+  ])
 }
 
 #let exp_item(
