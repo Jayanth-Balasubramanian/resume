@@ -5,7 +5,7 @@
 #header(
   name: "Jayanth Balasubramanian",
   phone: "+65 85441456",
-  email: "jayanth@comp.nus.edu.sg",
+  email: "jayanth.balasubramanian1@gmail.com",
   // linkedin: "https://linkedin.com/in/jayanth-balasubramanian",
   site: "github.com/Jayanth-Balasubramanian",
 )
@@ -15,7 +15,7 @@
   name: "National University of Singapore",
   degree: "Bachelor of Computing (Hons.) in Computer Science",
   location: "Kent Ridge, Singapore",
-  date: "Aug. 2021 - Present",
+  date: "Aug 2021 - Jun 2025",
   [#strong[Specialization]: Artificial intelligence, Parallel Computing],
   [#strong[GPA]: 4.26/5.0],
   [#strong[Honors & Awards]: Artificial Intelligence Focus Area (Merit) #link("https://credentials.nus.edu.sg/2c50adfd-97ff-4f0e-87dd-cda5b633a147#acc.1mILiU3q")[(link)], Science and Technology Scholarship],
@@ -30,7 +30,7 @@ Programming, Operating Systems, Data Structures and Algorithms, Software Enginee
 )
 #skill_item(
   category: "Libraries",
-  skills: "PyTorch, Transformers, Accelerate, JAX, PyTorch Lightning, Numpy, Scikit-learn, Pandas, Wandb, Raytune, Gymasium, CUDA, OpenMP, MPI"
+  skills: "PyTorch, Transformers, Accelerate, JAX, PyTorch Lightning, Numpy, Scikit-learn, Pandas, Wandb, Raytune, Gymasium, PyTriton, TensorRT"
 )
 #skill_item(
   category: "Developer Tools",
@@ -42,14 +42,31 @@ Programming, Operating Systems, Data Structures and Algorithms, Software Enginee
   role: "Data Science Intern",
   name: "Ahrefs",
   location: "Straits View, Singapore",
-  date: "March 2024 - Present",
+  date: "Mar 2024 - Apr 2025",
   [Ahrefs is an SEO and web analytics company that provides tools for backlink analysis, keyword research, and site audits.],
   [Developed an LLM based search engine to predict most relevant documents for search queries, trained on a corpus of 150,000 webpages.],
-  [Designed an internal library for synthetic data generation with async and multithreading support, that applies finite state machines to process datasets; adopted by 20+ projects.],
+  [Built an async synthetic data generation framework where users define dataset-processing workflows as finite-state machines from input to output; adopted by 20+ downstream projects.],
   [Trained BERT-based classifier to extract named entities and their associated sentiment from opinionated
 webpages on 2 million webpages, significantly outperforming existing open-source models.],
-  [Tools: Accelerate, PyTorch, Transformers, Wandb, Torchserve, vLLM]
+[
+  Converted a BERT-like hierarchical classifier into a TensorRT FP16 model using `triton-model-navigator`, hand-vectorizing all level-wise softmax operations into one vectorized pass to eliminate Python loops.
+],
+[
+  Developed a custom `trt-fp16` inference service with dynamic batching support for a production-scale transformer encoder in `tensorrt` and `cuda-py`, achieving 1100 RPS on a single A100 (3.8x `torchserve`, 2.4x our C++ engine in an $8 times$ A100 benchmark).
+],
+  [Tools: Accelerate, Transformers, TensorRT, PyTriton]
 )
+#exp_item(
+  role: "AI Research Intern",
+  name: "Hyundai Motor Group Innovation Center Singapore (HMGICS)",
+  location: "Jurong East, Singapore",
+  date: "May 2023 - Dec 2023",
+[Developed a reinforcement learning model to optimize online task assignment and path planning for autonomous factory vehicles.],  
+[OpenAI Gym was used to simulate a factory environment with new tasks generated according to a fixed prior distribution.],  
+[Researched few-shot semantic segmentation methods to detect manufacturing defects from images with minimal labeled data.],   
+[Tools: C++, PyTorch Lightning, Protocol Buffers, OpenAI Gym, Raytune, Wandb]  
+)
+
 #exp_item(
 role: "Part-time Research Assistant",
 name: "Collaborative Learning and Adaptive Robots Lab",
@@ -64,16 +81,7 @@ conditioned on camera observations.],
 [Tools: NVDiffRast and PyTorch3D for differentiable rendering, PyTorch for ML models, IsaacGym
 for simulation.]
 )
-#exp_item(
-  role: "AI Research Intern",
-  name: "Hyundai Motor Group Innovation Center Singapore (HMGICS)",
-  location: "Jurong East, Singapore",
-  date: "May 2023 - Dec 2023",
-[Developed a reinforcement learning model to optimize online task assignment and path planning for autonomous factory vehicles.],  
-[OpenAI Gym was used to simulate a factory environment with new tasks generated according to a fixed prior distribution.],  
-[Researched few-shot semantic segmentation methods to detect manufacturing defects from images with minimal labeled data.],   
-[Tools: C++, PyTorch Lightning, Protocol Buffers, OpenAI Gym, Raytune, Wandb]  
-)
+
 #exp_item(
   role: "Trustworthy AI Intern",
   name: "NUS-NCS Joint Lab for Cybersecurity",
@@ -98,7 +106,7 @@ for simulation.]
 #project_item(
   name: "Grammar Correction with Minimal Edits",
   skills: "Transformers, TRL",
-  date: "Feb. 2024 - Apr. 2024",
+  date: "Feb 2024 - Apr 2024",
   [Finetuned 2–3 billion parameter LLMs to correct grammar errors in long-form text across varying English fluency levels.],
   [Constructed a synthetic preference dataset using GPT-4 to model preference for minimal edits while correcting grammar to preserve authorial voice.],
   [Demonstrated a 20% reduction in edit distance across English fluency levels post-alignment with DPO while preserving grammar correction performance.],
